@@ -1,9 +1,14 @@
 <section class="cart-show">
 
-  <header class="page-header">
-    <h1>My Cart</h1>
-  </header>
+<header class="page-header">
+  <h1>My Cart</h1>
+</header>
 
+<% if enhanced_cart.empty? %>
+  <div class="alert alert-info">
+    <strong>Your cart is empty.</strong> Why not add some items? <a href="/" class="alert-link">Go to homepage</a>.
+  </div>
+<% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +53,6 @@
       <% end %>
     </div>
   </div>
+<% end %>
 
 </section>
