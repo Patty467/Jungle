@@ -111,3 +111,18 @@ form.button_to {
 .text-danger {
   color: #f38792 !important;
 }
+
+.nav-item.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-item.user-info .user-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-item.user-info .nav-link {
+  margin: 0;
+}
