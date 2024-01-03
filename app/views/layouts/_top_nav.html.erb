@@ -43,15 +43,13 @@
         </li> %>
       </ul>
       <ul class="navbar-nav">
-
-
         <% if logged_in? %>
-          <li class="nav-item">
-            User: <%= current_user.first_name %> <%= current_user.last_name %>
+          <li class="nav-item user-info">
+            <span class="user-name">User: <%= current_user.first_name %> <%= current_user.last_name %></span>
+            <%= link_to 'Profile', user_path(current_user), class: "nav-link" %>
+            <%= link_to 'Logout', logout_path, method: :delete, class: "nav-link" %>
           </li>
         <% end %>
-
-        
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle text-danger"
